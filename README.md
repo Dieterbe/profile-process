@@ -5,6 +5,15 @@ Without setting up monitoring software? Just here and now, on a given Linux mach
 
 This script allows just that.  Although at this point only the minimum functionality is implemented, it's more of a prototype.  But it helped me debugging an issue...
 
+### How it works
+
+launches a subprocess, collects stats every `probe_interval`.  When child finishes, shows graphs and exits with same exit code as child.
+
+### Limitations
+* crude graphs, can miss subtle short spikes
+* probe interval does not account for duration of code overhead of collecting metrics (i.e. real time drifs over time)
+* various bugs, probably?
+
 ### Dependencies
 
 * python2
