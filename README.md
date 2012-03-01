@@ -5,6 +5,18 @@ Without setting up monitoring software? Just here and now, on a given Linux mach
 
 This script allows just that.  Although at this point only the minimum functionality is implemented, it's more of a prototype.  But it helped me debugging an issue...
 
+### Example
+
+On a python project of mine:
+
+```
+$ profile-process.py ./helper.py --stats_experiments --tag=child-CF1-CS100-EB1-FWk0-FWna1-FWnb5-LSI0-LSIt500-M5-MP0-NB10-NFmerged_ner_mofis-PI-PRa0-PRf-SQk10-SQr0.5-SRf-SS2000-Sl0-Sp0-T1-Ta0-Tlb2-Tntf0-Tntfidfunit
+```
+
+![Screenshot](https://github.com/Dieterbe/profile-process/raw/master/example/profile_cpu.png)
+![Screenshot](https://github.com/Dieterbe/profile-process/raw/master/example/profile_io.png)
+![Screenshot](https://github.com/Dieterbe/profile-process/raw/master/example/profile_memory.png)
+
 ### How it works
 
 launches a subprocess, collects stats every `probe_interval`.  When child finishes, shows graphs and exits with same exit code as child.
