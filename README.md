@@ -19,7 +19,7 @@ $ profile-process.py ./helper.py --stats_experiments --tag=child-CF1-CS100-EB1-F
 
 ### How it works
 
-launches a subprocess, collects stats every `probe_interval`.  When child finishes, shows graphs and exits with same exit code as child.
+launches a subprocess, collects stats every `probe_interval`.  When child finishes, writes graphs to png files and exits with same exit code as child.
 
 ### Limitations
 * crude graphs, can miss subtle short spikes
